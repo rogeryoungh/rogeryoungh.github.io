@@ -53,26 +53,22 @@
       width: 160px;
       height: 160px;
       border-radius: 50%;
-      background-color: #d0f0f0;
-      /* opacity: 50%; */
-      transition: all 500ms;
+      background-color: #d0f0f0a0;
     }
 
     .avatar {
       position: absolute;
       width: 160px;
       height: 160px;
+      border-radius: 50%;
       transition: all 500ms;
-      opacity: 0%;
+      opacity: 25%;
+      filter: blur(1rem);
     }
 
     #head:hover .avatar {
-      opacity: 30%;
-      transition: all 500ms;
-    }
-
-    #head:hover .avatar-bg {
-      opacity: 60%;
+      /* opacity: 30%; */
+      filter: blur(0);
       transition: all 500ms;
     }
 
