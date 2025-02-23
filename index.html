@@ -4,7 +4,114 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="style.css" />
+  <style>
+    html,
+    body {
+      padding: 0;
+      margin: 0;
+      font-size: 16px;
+    }
+
+    #container {
+      font-family: Inter, Source, segoe ui, Roboto, Ubuntu,
+        Cantarell, open sans, helvetica neue, sans-serif;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1.5em;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    code {
+      font-size: 0.9rem;
+    }
+
+    #card {
+      width: 720px;
+      margin: 32px;
+      /* border: black solid 3px; */
+      /* padding: 32px; */
+      /* box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px; */
+      display: flex;
+      align-items: start;
+      justify-content: center;
+      flex-direction: row;
+    }
+
+    #left-panel {
+      flex: 20%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #right-panel {
+      flex: 75%;
+      margin-left: 32px;
+    }
+
+    .avatar {
+      width: 80%;
+      height: 80%;
+      border-radius: 50%;
+      border: #aaa 2px solid;
+    }
+
+    .social-icons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #name {
+      font-size: 2.2rem;
+    }
+
+    #name-2 {
+      font-size: 1.2rem;
+      color: #666;
+    }
+
+    a {
+      /* color: #388; */
+      /* color: #c80000; */
+
+      color: #499;
+      text-decoration-line: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: 640px) {
+      #card {
+        border: none;
+        max-width: 480px;
+      }
+
+      #card {
+        flex-direction: column;
+        align-items: center;
+
+      }
+
+      .avatar {
+        max-width: 240px;
+      }
+
+      #right-panel {
+        margin: 0;
+        /* margin-top: 24px; */
+        margin-bottom: 5vh;
+      }
+    }
+  </style>
   <link rel="shortcut icon" type="image/png" href="https://files.rogery.dev/me/ico-96.png">
   <title>Roger Young</title>
 </head>
@@ -12,32 +119,29 @@
 <body>
   <div id="container">
     <div id="card">
-      <div id="top-panel">
-        <div id="left-panel">
-          <img class="avatar" src="https://files.rogery.dev/me/icon-512.png" />
-        </div>
-        <div id="right-panel">
-          <h1 id="name">Roger Young</h1>
-          <p>System Engineer.</p>
-          <p>Interested in Math and Coding.</p>
-        </div>
+      <div id="left-panel">
+        <img class="avatar" src="https://files.rogery.dev/me/icon-512.png" />
       </div>
-      <div id="bottom-panel" class="social-icons">
-        <a href="https://blog.rogery.dev">
-          <img class="icon" title="Blog" src="img/xicon/note.svg" />
-        </a>
-        <a href="https://github.com/rogeryoungh">
-          <img class="icon" title="GitHub" src="img/xicon/github.svg" />
-        </a>
-        <a href="https://t.me/rogeryoungh">
-          <img class="icon" title="Telegram" src="img/xicon/telegram.svg" />
-        </a>
-        <a href="https://www.zhihu.com/people/rogeryoungh">
-          <img class="icon" title="Zhihu" src="img/xicon/zhihu.svg" />
-        </a>
-        <a href="mailto:rogeryoungh@foxmail.com">
-          <img class="icon" title="EMail" src="img/xicon/email.svg" />
-        </a>
+      <div id="right-panel">
+        <h1 id="name">Roger Young</h1>
+        <p id="name-2">System Engineer</p>
+        <p>
+          I'm a masters student at Zhejiang U, passionate about Computer Graphics and High Performance Computing.
+          My interests lie in creating visually stunning graphics and optimizing computational processes to achieve
+          maximum efficiency.
+          I'm always eager to learn and explore new technologies in these domains.
+        </p>
+        <p>You can find me on
+          <a href="https://blog.rogery.dev/">Blog</a> /
+          <a href="https://github.com/rogeryoungh">GitHub</a> /
+          <a href="https://t.me/rogeryoungh">Telegram</a> /
+          <a href="https://codeforces.com/profile/rogeryoung">CodeForces</a> /
+          <a href="https://www.linkedin.com/in/rogeryoungh">Linkedin</a> /
+          <a href="https://www.zhihu.com/people/rogeryoungh">知乎</a>.
+          Feel free to email me at
+          <code>rogeryoungh at foxmail dot com</code>.
+        </p>
+        <p> <a href="https://blog.rogery.dev/about">More about me &gt;</a></p>
       </div>
     </div>
   </div>
