@@ -32,44 +32,53 @@
     }
 
     #card {
-      width: 720px;
+      width: 656px;
       margin: 32px;
-      /* border: black solid 3px; */
-      /* padding: 32px; */
-      /* box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px; */
-      display: flex;
-      align-items: start;
-      justify-content: center;
-      flex-direction: row;
     }
 
-    #left-panel {
-      flex: 20%;
+    #head {
       display: flex;
       align-items: center;
-      justify-content: center;
+      line-height: 1.5em;
     }
 
-    #right-panel {
-      flex: 75%;
-      margin-left: 32px;
+    #left-head {
+      position: absolute;
+      margin-left: -84px;
+      margin-top: -24px;
+      z-index: -1;
+    }
+
+    .avatar-bg {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: solid #d0f0f0 3px;
+      background-color: #d0f0f0;
+      /* opacity: 50%; */
+      transition: all 500ms;
     }
 
     .avatar {
-      width: 80%;
-      height: 80%;
-      border-radius: 50%;
-      border: #aaa 2px solid;
+      position: absolute;
+      width: 160px;
+      height: 160px;
+      transition: all 500ms;
+      opacity: 0%;
     }
 
-    .social-icons {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    #head:hover .avatar {
+      opacity: 30%;
+      transition: all 500ms;
+    }
+
+    #head:hover .avatar-bg {
+      opacity: 60%;
+      transition: all 500ms;
     }
 
     #name {
-      font-size: 2.2rem;
+      font-size: 2.75rem;
     }
 
     #name-2 {
@@ -88,29 +97,6 @@
     a:hover {
       text-decoration: underline;
     }
-
-    @media screen and (max-width: 640px) {
-      #card {
-        border: none;
-        max-width: 480px;
-      }
-
-      #card {
-        flex-direction: column;
-        align-items: center;
-
-      }
-
-      .avatar {
-        max-width: 240px;
-      }
-
-      #right-panel {
-        margin: 0;
-        /* margin-top: 24px; */
-        margin-bottom: 5vh;
-      }
-    }
   </style>
   <link rel="shortcut icon" type="image/png" href="https://files.rogery.dev/me/ico-96.png">
   <title>Roger Young</title>
@@ -119,12 +105,17 @@
 <body>
   <div id="container">
     <div id="card">
-      <div id="left-panel">
-        <img class="avatar" src="https://files.rogery.dev/me/icon-512.png" />
+      <div id="head">
+        <div id="left-head" style="">
+          <img class="avatar" src="https://files.rogery.dev/me/icon-512.png" />
+          <img class="avatar-bg" />
+        </div>
+        <div id="right-head">
+          <h1 id="name">Roger Young</h1>
+          <p id="name-2">System Engineer</p>
+        </div>
       </div>
-      <div id="right-panel">
-        <h1 id="name">Roger Young</h1>
-        <p id="name-2">System Engineer</p>
+      <div>
         <p>
           I'm a masters student at Zhejiang U, passionate about Computer Graphics and High Performance Computing.
           My interests lie in creating visually stunning graphics and optimizing computational processes to achieve
